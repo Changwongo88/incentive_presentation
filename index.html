@@ -1640,7 +1640,7 @@
         const introObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCount('count-multiplier', 15, '%', 2000);
+                    animateCount('count-multiplier', 20, '%', 2000);
                     setTimeout(() => animateCount('count-periods', 2, '', 1500), 300);
                     setTimeout(() => animateCount('count-metrics', 10, '+', 1500), 600);
                 }
