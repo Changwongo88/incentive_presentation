@@ -800,6 +800,12 @@
                     </div>
                     <div class="text-3xl" style="color: #98FF98; text-shadow: 0 0 10px rgba(152, 255, 152, 0.8);">→</div>
                     <div class="flex-1 min-w-[120px]">
+                        <div class="text-4xl mb-2">📱</div>
+                        <div class="text-sm font-bold text-red-400">앱스토어 수수료 차감</div>
+                        <div class="text-xs text-red-400 mt-1 font-bold">약 30%</div>
+                    </div>
+                    <div class="text-3xl" style="color: #98FF98; text-shadow: 0 0 10px rgba(152, 255, 152, 0.8);">→</div>
+                    <div class="flex-1 min-w-[120px]">
                         <div class="text-4xl mb-2">🤝</div>
                         <div class="text-sm font-bold text-yellow-400">배분율</div>
                         <div class="text-xs text-yellow-400 mt-1 font-bold" id="diagram-ratio">50%</div>
@@ -808,7 +814,7 @@
                     <div class="flex-1 min-w-[120px]">
                         <div class="text-4xl mb-2">💼</div>
                         <div class="text-sm font-bold text-green-400">슈퍼캣 순매출</div>
-                        <div class="text-xs text-green-400 mt-1 font-bold" id="diagram-net-sales">525억</div>
+                        <div class="text-xs text-green-400 mt-1 font-bold" id="diagram-net-sales">350억</div>
                     </div>
                     <div class="text-3xl" style="color: #98FF98; text-shadow: 0 0 10px rgba(152, 255, 152, 0.8);">→</div>
                     <div class="flex-1 min-w-[120px]">
@@ -855,7 +861,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h4 class="text-xl font-bold mb-2">2️⃣ 퍼블리셔와 배분</h4>
-                        <p class="text-gray-400 mb-3">총 매출의 70%를 퍼블리셔와 슈퍼캣이 나눕니다</p>
+                        <p class="text-gray-400 mb-3">퍼블리셔와 슈퍼캣이 배분율에 따라 나눕니다</p>
                         <div class="mt-4">
                             <div class="slider-container">
                                 <div class="slider-label">
@@ -879,10 +885,10 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h4 class="text-xl font-bold mb-2">3️⃣ 슈퍼캣 순매출 확정</h4>
-                        <p class="text-gray-400 mb-3">배분 후 슈퍼캣이 실제로 받는 금액</p>
+                        <p class="text-gray-400 mb-3">배분율에 따라 슈퍼캣이 실제로 받는 금액</p>
                         <div class="mt-3 p-3 bg-green-500/10 rounded-lg border border-green-500/30">
                             <div class="text-center">
-                                <div class="text-lg text-gray-300"><span id="calc-revenue">1,000</span>억 × 70% × <span id="calc-ratio">50</span>% =</div>
+                                <div class="text-lg text-gray-300"><span id="calc-revenue">1,000</span>억 × <span id="calc-ratio">50</span>% =</div>
                                 <div class="text-green-400 font-bold text-3xl mt-2" id="net-sales">350억원</div>
                                 <div class="text-xs text-gray-500 mt-1">이 돈으로 비용과 인센티브를 충당</div>
                             </div>
@@ -967,50 +973,6 @@
                     프로젝트 성과가 좋을수록 더 많은 인센티브가 전체 풀로 확정됩니다.<br>
                     <span class="text-yellow-400">회사 영업이익 증가</span> = <span class="text-green-400">인센티브 풀 증가</span> = <span class="text-blue-400">개인 보상 증가</span>
                 </p>
-            </div>
-            
-            <div class="text-center mt-8">
-                <button class="explore-btn" onclick="toggleDetail('step1-detail')">
-                    💡 계산 예시 보기
-                </button>
-            </div>
-            
-            <div id="step1-detail" class="detail-panel mt-6">
-                <div class="bg-slate-800 rounded-lg p-6 border border-yellow-500/30">
-                    <h4 class="text-xl font-bold mb-4 text-yellow-400">📊 실제 계산 예시 (성공 시나리오)</h4>
-                    <div class="space-y-4 text-gray-300">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-slate-700 p-4 rounded">
-                                <div class="text-sm text-gray-400 mb-1">1️⃣ 매출(G)</div>
-                                <div class="text-2xl font-bold text-yellow-400" id="detail-revenue">1,000억원</div>
-                                <div class="text-xs text-gray-400 mt-1">슬라이더로 조절 가능</div>
-                            </div>
-                            <div class="bg-slate-700 p-4 rounded">
-                                <div class="text-sm text-gray-400 mb-1">2️⃣ 배분율</div>
-                                <div class="text-2xl font-bold text-yellow-400" id="detail-ratio">50%</div>
-                                <div class="text-xs text-gray-400 mt-1">슬라이더로 조절 가능</div>
-                            </div>
-                            <div class="bg-slate-700 p-4 rounded">
-                                <div class="text-sm text-gray-400 mb-1">3️⃣ 순매출(S)</div>
-                                <div class="text-2xl font-bold text-green-400" id="detail-net-sales">350억원</div>
-                                <div class="text-xs text-gray-400 mt-1">= <span id="detail-revenue-calc">1,000</span>억 × 70% × <span id="detail-ratio-calc">50</span>%</div>
-                            </div>
-                            <div class="bg-slate-700 p-4 rounded">
-                                <div class="text-sm text-gray-400 mb-1">4️⃣ 영업이익</div>
-                                <div class="text-2xl font-bold text-blue-400" id="detail-profit">약 150억원</div>
-                                <div class="text-xs text-gray-400 mt-1">순매출 - 비용</div>
-                            </div>
-                        </div>
-                        <div class="bg-gradient-to-r from-green-500/20 to-lime-500/20 p-6 rounded border-2 border-green-500/50">
-                            <div class="text-center">
-                                <div class="text-sm text-gray-400 mb-2">5️⃣ 최종 인센티브 풀 확정</div>
-                                <div class="text-4xl font-bold text-yellow-400 mb-2" id="detail-pool">약 40억원</div>
-                                <div class="text-lg text-gray-300">= 영업이익 <span id="detail-profit-for-calc">269</span>억 × <span class="text-green-400 font-bold">약 15%</span></div>
-                                <div class="text-sm text-gray-400 mt-3">※ 프로젝트 성과가 좋을수록 비율이 증가하여 최대 15%까지 배분</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1131,15 +1093,13 @@
                     <div class="flow-item">
                         <div class="text-4xl mb-3">💰</div>
                         <h4 class="text-2xl font-bold mb-3">1차 지급</h4>
-                        <div class="text-yellow-400 font-bold text-lg mb-2">출시 후 6개월째</div>
-                        <div class="text-sm text-gray-400">첫 6개월 실적 기준</div>
+                        <div class="text-yellow-400 font-bold text-lg mb-2">첫 6개월 실적 기준</div>
                     </div>
                     
                     <div class="flow-item">
                         <div class="text-4xl mb-3">💎</div>
                         <h4 class="text-2xl font-bold mb-3">2차 지급</h4>
-                        <div class="text-yellow-400 font-bold text-lg mb-2">출시 후 12개월째</div>
-                        <div class="text-sm text-gray-400">다음 6개월 실적 기준</div>
+                        <div class="text-yellow-400 font-bold text-lg mb-2">다음 6개월 실적 기준</div>
                     </div>
                 </div>
             </div>
@@ -1406,10 +1366,55 @@
                 </div>
             </div>
             
-            <div class="chart-container mt-12" style="max-height: 400px;">
-                <h4 class="text-xl font-bold mb-4 text-center text-yellow-400">📈 Period별 인센티브 풀 변화 시뮬레이션</h4>
-                <div style="height: 300px;">
-                    <canvas id="periodProgressChart"></canvas>
+            <div class="mt-12">
+                <h4 class="text-2xl font-bold mb-6 text-center text-yellow-400">📈 영업이익에 따른 인센티브 풀 변화</h4>
+                
+                <!-- 영업이익 슬라이더 -->
+                <div class="max-w-3xl mx-auto mb-8 p-6 bg-slate-800/80 rounded-lg border-2 border-white/30" style="background: rgba(30, 30, 30, 0.95) !important;">
+                    <div class="slider-container">
+                        <div class="slider-label">
+                            <span class="text-gray-300 font-semibold text-lg">영업이익 조절</span>
+                            <span class="slider-value text-3xl" id="profit-slider-display">500억원</span>
+                        </div>
+                        <input type="range" min="100" max="3000" value="500" step="10" class="slider" id="profit-slider">
+                        <div class="slider-range">
+                            <span>100억</span>
+                            <span>3,000억</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 계산 결과 표시 -->
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="p-8 bg-slate-800/80 rounded-lg border-2 border-purple-500/50" style="background: rgba(35, 35, 35, 0.95) !important;">
+                        <div class="text-center">
+                            <div class="text-sm text-gray-400 mb-2">영업이익</div>
+                            <div class="text-5xl font-black text-purple-400 mb-2" id="current-profit">500</div>
+                            <div class="text-xl text-gray-300">억원</div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 bg-slate-800/80 rounded-lg border-2 border-white/50" style="background: rgba(40, 40, 40, 0.95) !important; box-shadow: 0 0 30px rgba(152, 255, 152, 0.3);">
+                        <div class="text-center">
+                            <div class="text-sm text-gray-400 mb-2">인센티브 풀 (최대 15%)</div>
+                            <div class="text-5xl font-black mb-2" style="color: #98FF98;" id="current-incentive-pool">75</div>
+                            <div class="text-xl text-gray-300">억원</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 간단한 공식 표시 -->
+                <div class="max-w-3xl mx-auto text-center mb-8 p-6 bg-slate-800/60 rounded-lg border border-white/20" style="background: rgba(25, 25, 25, 0.9) !important;">
+                    <div class="text-2xl text-gray-300">
+                        <span class="text-purple-400 font-bold" id="formula-profit">500</span>억원 
+                        <span class="text-gray-500">×</span> 
+                        <span class="text-yellow-400 font-bold">15%</span> 
+                        <span class="text-gray-500">=</span> 
+                        <span style="color: #98FF98;" class="font-bold" id="formula-pool">75</span>억원
+                    </div>
+                    <div class="text-sm text-gray-500 mt-3">
+                        💡 슬라이더를 움직여 영업이익에 따른 인센티브 풀 변화를 확인하세요
+                    </div>
                 </div>
             </div>
         </div>
@@ -1641,155 +1646,56 @@
             }
         }
         
+        // 영업이익에 따른 인센티브 풀 계산 및 업데이트
+        function updateProfitSimulation(profit) {
+            const incentivePool = Math.round(profit * 0.15 * 10) / 10;
+            
+            // 표시 업데이트
+            if (document.getElementById('current-profit')) {
+                document.getElementById('current-profit').textContent = profit;
+            }
+            if (document.getElementById('current-incentive-pool')) {
+                document.getElementById('current-incentive-pool').textContent = Math.round(incentivePool);
+            }
+            if (document.getElementById('formula-profit')) {
+                document.getElementById('formula-profit').textContent = profit;
+            }
+            if (document.getElementById('formula-pool')) {
+                document.getElementById('formula-pool').textContent = Math.round(incentivePool);
+            }
+        }
+        
         // Period별 진행 차트 - 섹션 6 진입 시 자동 생성
         const section6Observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && !window.periodChart) {
-                    const ctx = document.getElementById('periodProgressChart');
-                    if (ctx) {
-                        // 단순화된 데이터: 영업이익 증가 → 인센티브 풀 증가 (최대 15% 배분)
-                        // P1: 영업이익 284억 → 약 5억 (약 2%)
-                        // P2: 영업이익 516억 → 약 43억 (약 8%)
-                        // P3: 영업이익 714억 → 약 93억 (약 13%)
-                        // P4: 영업이익 869억 → 약 130억 (약 15%)
+                if (entry.isIntersecting) {
+                    // 슬라이더 이벤트 리스너 추가 (한 번만)
+                    const profitSlider = document.getElementById('profit-slider');
+                    const profitSliderDisplay = document.getElementById('profit-slider-display');
+                    
+                    if (profitSlider && profitSliderDisplay && !profitSlider.dataset.initialized) {
+                        profitSlider.dataset.initialized = 'true';
                         
-                        window.periodChart = new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: ['P1', 'P2', 'P3', 'P4'],
-                                datasets: [
-                                    {
-                                        label: '인센티브 풀 (억원)',
-                                        data: [5.7, 43, 93, 130],
-                                        backgroundColor: [
-                                            'rgba(239, 68, 68, 0.7)',
-                                            'rgba(251, 191, 36, 0.7)',
-                                            'rgba(34, 197, 94, 0.7)',
-                                            'rgba(59, 130, 246, 0.7)'
-                                        ],
-                                        borderColor: [
-                                            'rgb(239, 68, 68)',
-                                            'rgb(251, 191, 36)',
-                                            'rgb(34, 197, 94)',
-                                            'rgb(59, 130, 246)'
-                                        ],
-                                        borderWidth: 2,
-                                        yAxisID: 'y'
-                                    },
-                                    {
-                                        label: '영업이익 (억원)',
-                                        data: [284, 516, 714, 869],
-                                        type: 'line',
-                                        borderColor: 'rgb(168, 85, 247)',
-                                        backgroundColor: 'rgba(168, 85, 247, 0.1)',
-                                        borderWidth: 3,
-                                        yAxisID: 'y1',
-                                        tension: 0.4,
-                                        fill: false,
-                                        pointRadius: 6,
-                                        pointBackgroundColor: 'rgb(168, 85, 247)',
-                                        pointBorderColor: '#fff',
-                                        pointBorderWidth: 2
-                                    }
-                                ]
-                            },
-                            options: {
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                interaction: {
-                                    mode: 'index',
-                                    intersect: false
-                                },
-                                plugins: {
-                                    legend: {
-                                        labels: { 
-                                            color: '#cbd5e1', 
-                                            font: { size: 14, weight: 'bold' },
-                                            padding: 20
-                                        }
-                                    },
-                                    tooltip: {
-                                        callbacks: {
-                                            label: function(context) {
-                                                let label = context.dataset.label || '';
-                                                if (label) {
-                                                    label += ': ';
-                                                }
-                                                if (context.parsed.y !== null) {
-                                                    label += context.parsed.y.toFixed(1) + '억원';
-                                                }
-                                                return label;
-                                            },
-                                            afterLabel: function(context) {
-                                                if (context.datasetIndex === 0) {
-                                                    const profitValues = [284, 516, 714, 869];
-                                                    const poolValues = [5.7, 43, 93, 130];
-                                                    const ratio = (poolValues[context.dataIndex] / profitValues[context.dataIndex] * 100).toFixed(1);
-                                                    return `영업이익의 약 ${ratio}% 배분`;
-                                                }
-                                                return '';
-                                            }
-                                        }
-                                    }
-                                },
-                                scales: {
-                                    y: {
-                                        type: 'linear',
-                                        display: true,
-                                        position: 'left',
-                                        title: {
-                                            display: true,
-                                            text: '인센티브 풀 (억원)',
-                                            color: '#fbbf24',
-                                            font: { size: 14, weight: 'bold' }
-                                        },
-                                        ticks: { 
-                                            color: '#94a3b8',
-                                            callback: function(value) {
-                                                return value + '억';
-                                            }
-                                        },
-                                        grid: { color: 'rgba(148, 163, 184, 0.1)' },
-                                        beginAtZero: true
-                                    },
-                                    y1: {
-                                        type: 'linear',
-                                        display: true,
-                                        position: 'right',
-                                        title: {
-                                            display: true,
-                                            text: '영업이익 (억원)',
-                                            color: '#a78bfa',
-                                            font: { size: 14, weight: 'bold' }
-                                        },
-                                        ticks: { 
-                                            color: '#94a3b8',
-                                            callback: function(value) {
-                                                return value + '억';
-                                            }
-                                        },
-                                        grid: { drawOnChartArea: false },
-                                        beginAtZero: true
-                                    },
-                                    x: {
-                                        ticks: { 
-                                            color: '#94a3b8',
-                                            font: { size: 13, weight: 'bold' }
-                                        },
-                                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                                    }
-                                }
-                            }
+                        // 초기값 설정
+                        const initialProfit = parseInt(profitSlider.value);
+                        updateProfitSimulation(initialProfit);
+                        
+                        // 슬라이더 이벤트
+                        profitSlider.addEventListener('input', () => {
+                            const profit = parseInt(profitSlider.value);
+                            profitSliderDisplay.textContent = profit + '억원';
+                            updateProfitSimulation(profit);
                         });
                     }
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.3 });
         
         const section6 = document.getElementById('section-6');
         if (section6) {
             section6Observer.observe(section6);
         }
+        
         
         // 키보드 네비게이션
         document.addEventListener('keydown', (e) => {
