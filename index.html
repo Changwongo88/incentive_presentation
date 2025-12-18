@@ -20,9 +20,6 @@
         body {
             font-family: 'Inter', sans-serif;
             background: #000000;
-            background-image: 
-                radial-gradient(circle, rgba(152, 255, 152, 0.03) 1px, transparent 1px);
-            background-size: 20px 20px;
             color: #ffffff;
             overflow-x: hidden;
         }
@@ -86,10 +83,9 @@
             left: 0;
             width: 0%;
             height: 4px;
-            background: linear-gradient(90deg, #98FF98 0%, #b3FFB3 100%);
+            background: #98FF98;
             z-index: 1000;
             transition: width 0.1s ease;
-            box-shadow: 0 0 10px rgba(152, 255, 152, 0.6);
         }
         
         /* 풀스크린 섹션 */
@@ -118,19 +114,15 @@
         .hero-title {
             font-size: clamp(2.5rem, 8vw, 5rem);
             font-weight: 900;
-            background: linear-gradient(135deg, #98FF98 0%, #b3FFB3 50%, #98FF98 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
             text-align: center;
             line-height: 1.2;
             margin-bottom: 2rem;
-            text-shadow: 0 0 20px rgba(152, 255, 152, 0.5);
         }
         
         .hero-subtitle {
             font-size: clamp(1.2rem, 3vw, 1.8rem);
-            color: #cbd5e1;
+            color: #e5e7eb;
             text-align: center;
             font-weight: 300;
         }
@@ -139,26 +131,26 @@
         .count-number {
             font-size: clamp(3rem, 10vw, 6rem);
             font-weight: 900;
-            color: #98FF98;
+            color: #ffffff;
             font-family: monospace;
         }
         
         /* STEP 카드 */
         .step-card {
-            background: rgba(0, 20, 0, 0.6);
+            background: rgba(30, 30, 30, 0.95);
             backdrop-filter: blur(20px);
-            border: 3px solid rgba(152, 255, 152, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.5);
             border-radius: 8px;
             padding: 3rem;
             max-width: 1200px;
             width: 100%;
-            box-shadow: 0 0 30px rgba(152, 255, 152, 0.2), 0 20px 60px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
             transition: all 0.5s ease;
         }
         
         .step-card:hover {
-            border-color: rgba(152, 255, 152, 0.8);
-            box-shadow: 0 0 40px rgba(152, 255, 152, 0.4), 0 30px 80px rgba(152, 255, 152, 0.2);
+            border-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.2);
         }
         
         .step-number {
@@ -170,7 +162,6 @@
             padding: 0.5rem 1.5rem;
             background: #98FF98;
             border-radius: 4px;
-            box-shadow: 0 0 15px rgba(152, 255, 152, 0.6);
             font-family: monospace;
         }
         
@@ -183,15 +174,15 @@
         
         .step-description {
             font-size: 1.1rem;
-            color: #cbd5e1;
+            color: #e5e7eb;
             line-height: 1.8;
             margin-bottom: 2rem;
         }
         
         /* 프로세스 플로우 */
         .flow-item {
-            background: rgba(0, 20, 0, 0.4);
-            border: 2px solid rgba(152, 255, 152, 0.3);
+            background: rgba(30, 30, 30, 0.9);
+            border: 2px solid rgba(255, 255, 255, 0.4);
             border-radius: 4px;
             padding: 2rem;
             margin: 1rem 0;
@@ -199,10 +190,9 @@
         }
         
         .flow-item:hover {
-            background: rgba(152, 255, 152, 0.1);
-            border-color: #98FF98;
+            background: rgba(40, 40, 40, 0.95);
+            border-color: rgba(255, 255, 255, 0.6);
             transform: translateX(10px);
-            box-shadow: 0 0 20px rgba(152, 255, 152, 0.3);
         }
         
         /* 배분율 바 */
@@ -229,32 +219,30 @@
         .feature-icon {
             width: 80px;
             height: 80px;
-            background: #98FF98;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
             margin: 0 auto 1rem;
-            box-shadow: 0 0 30px rgba(152, 255, 152, 0.6);
             image-rendering: pixelated;
-            border: 3px solid #000000;
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
         
         /* 강조 텍스트 */
         .highlight {
-            color: #98FF98;
+            color: #ffffff;
             font-weight: 700;
-            text-shadow: 0 0 10px rgba(152, 255, 152, 0.6);
         }
         
         .highlight-box {
-            background: rgba(152, 255, 152, 0.08);
-            border-left: 4px solid #98FF98;
+            background: rgba(35, 35, 35, 0.95);
+            border-left: 4px solid rgba(255, 255, 255, 0.7);
             padding: 1.5rem;
             border-radius: 4px;
             margin: 1.5rem 0;
-            box-shadow: 0 0 15px rgba(152, 255, 152, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
         
         /* 애니메이션 */
@@ -327,14 +315,12 @@
         }
         
         .nav-dot.active {
-            background: #98FF98;
+            background: rgba(255, 255, 255, 0.9);
             transform: scale(1.5);
-            box-shadow: 0 0 15px rgba(152, 255, 152, 0.8);
         }
         
         .nav-dot:hover {
-            background: rgba(152, 255, 152, 0.7);
-            box-shadow: 0 0 10px rgba(152, 255, 152, 0.6);
+            background: rgba(255, 255, 255, 0.7);
         }
         
         /* 그리드 레이아웃 */
@@ -346,30 +332,31 @@
         }
         
         .feature-card {
-            background: rgba(0, 20, 0, 0.4);
-            border: 2px solid rgba(152, 255, 152, 0.3);
+            background: rgba(30, 30, 30, 0.9);
+            border: 2px solid rgba(255, 255, 255, 0.4);
             border-radius: 4px;
             padding: 2rem;
             text-align: center;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
         
         .feature-card:hover {
-            background: rgba(152, 255, 152, 0.1);
-            border-color: #98FF98;
+            background: rgba(40, 40, 40, 0.95);
+            border-color: rgba(255, 255, 255, 0.6);
             transform: translateY(-10px);
-            box-shadow: 0 0 25px rgba(152, 255, 152, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
         }
         
         /* 차트 컨테이너 */
         .chart-container {
             max-width: 800px;
             margin: 2rem auto;
-            background: rgba(0, 20, 0, 0.6);
+            background: rgba(30, 30, 30, 0.95);
             padding: 2rem;
             border-radius: 4px;
-            border: 2px solid rgba(152, 255, 152, 0.4);
-            box-shadow: 0 0 25px rgba(152, 255, 152, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
         
         /* Pause & Explore 버튼 */
@@ -425,16 +412,16 @@
             border-radius: 2px;
             background: #98FF98;
             flex-shrink: 0;
-            box-shadow: 0 0 20px rgba(152, 255, 152, 0.8);
             image-rendering: pixelated;
         }
         
         .timeline-content {
-            background: rgba(0, 20, 0, 0.4);
+            background: rgba(30, 30, 30, 0.9);
             padding: 1.5rem;
             border-radius: 4px;
-            border: 2px solid rgba(152, 255, 152, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.4);
             flex: 1;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
         }
         
         /* 성과 레벨 다이어그램 */
@@ -476,8 +463,7 @@
         .slider-value {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #98FF98;
-            text-shadow: 0 0 10px rgba(152, 255, 152, 0.6);
+            color: #ffffff;
             font-family: monospace;
         }
         
@@ -485,11 +471,11 @@
             width: 100%;
             height: 8px;
             border-radius: 2px;
-            background: rgba(0, 50, 0, 0.4);
+            background: rgba(40, 40, 40, 0.6);
             outline: none;
             -webkit-appearance: none;
             appearance: none;
-            border: 1px solid rgba(152, 255, 152, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .slider::-webkit-slider-thumb {
@@ -500,14 +486,12 @@
             border-radius: 2px;
             background: #98FF98;
             cursor: pointer;
-            box-shadow: 0 0 15px rgba(152, 255, 152, 0.8);
             transition: all 0.2s ease;
             border: 2px solid #000000;
         }
         
         .slider::-webkit-slider-thumb:hover {
             transform: scale(1.2);
-            box-shadow: 0 0 25px rgba(152, 255, 152, 1);
         }
         
         .slider::-moz-range-thumb {
@@ -517,13 +501,11 @@
             background: #98FF98;
             cursor: pointer;
             border: 2px solid #000000;
-            box-shadow: 0 0 15px rgba(152, 255, 152, 0.8);
             transition: all 0.2s ease;
         }
         
         .slider::-moz-range-thumb:hover {
             transform: scale(1.2);
-            box-shadow: 0 0 25px rgba(152, 255, 152, 1);
         }
         
         .slider-range {
@@ -537,58 +519,68 @@
         /* 네온 그린 색상 전역 적용 */
         .text-yellow-400,
         .text-yellow-300 {
-            color: #98FF98 !important;
-            text-shadow: 0 0 10px rgba(152, 255, 152, 0.5);
+            color: #fbbf24 !important;
         }
         
+        /* 민트 그린은 중요한 포인트에만 사용 (20% 수준) */
         .text-green-400,
         .text-green-300,
         .text-green-500 {
-            color: #98FF98 !important;
-            text-shadow: 0 0 10px rgba(152, 255, 152, 0.5);
+            color: #e5e7eb !important;
         }
         
         .bg-yellow-500\/20,
         .bg-yellow-500\/10,
         .bg-yellow-400\/50,
-        .bg-yellow-400\/60,
+        .bg-yellow-400\/60 {
+            background-color: rgba(251, 191, 36, 0.15) !important;
+        }
+        
         .bg-green-500\/20,
         .bg-green-500\/10,
         .bg-green-400\/50,
         .bg-green-400\/60 {
-            background-color: rgba(152, 255, 152, 0.15) !important;
+            background-color: rgba(40, 40, 40, 0.6) !important;
         }
         
         .border-yellow-500\/50,
         .border-yellow-500\/30,
         .border-yellow-400\/50,
-        .border-yellow-400\/60,
+        .border-yellow-400\/60 {
+            border-color: rgba(251, 191, 36, 0.5) !important;
+        }
+        
         .border-green-500\/50,
         .border-green-500\/30,
         .border-green-400\/50,
         .border-green-400\/60 {
-            border-color: rgba(152, 255, 152, 0.5) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
         }
         
         .from-yellow-400,
         .via-orange-500,
         .to-yellow-400,
         .from-yellow-500,
-        .to-orange-500,
+        .to-orange-500 {
+            --tw-gradient-from: #fbbf24 !important;
+            --tw-gradient-to: #f59e0b !important;
+            --tw-gradient-via: #fbbf24 !important;
+        }
+        
         .from-green-400,
         .via-lime-500,
         .to-green-400,
         .from-green-500,
         .to-lime-500 {
-            --tw-gradient-from: #98FF98 !important;
-            --tw-gradient-to: #b3FFB3 !important;
-            --tw-gradient-via: #98FF98 !important;
+            --tw-gradient-from: rgba(45, 45, 45, 0.95) !important;
+            --tw-gradient-to: rgba(55, 55, 55, 0.95) !important;
+            --tw-gradient-via: rgba(50, 50, 50, 0.95) !important;
         }
         
         /* 픽셀 도트 패턴 배경 */
         .pixel-dots {
             background-image: 
-                radial-gradient(circle, rgba(152, 255, 152, 0.1) 1px, transparent 1px);
+                radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
             background-size: 10px 10px;
         }
         
@@ -597,12 +589,11 @@
             height: 2px;
             background: repeating-linear-gradient(
                 90deg,
-                #98FF98 0px,
-                #98FF98 10px,
+                rgba(255, 255, 255, 0.3) 0px,
+                rgba(255, 255, 255, 0.3) 10px,
                 transparent 10px,
                 transparent 20px
             );
-            box-shadow: 0 0 5px rgba(152, 255, 152, 0.5);
         }
         
         /* 픽셀 박스 장식 */
@@ -612,8 +603,7 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            background: #98FF98;
-            box-shadow: 0 0 10px rgba(152, 255, 152, 0.8);
+            background: rgba(255, 255, 255, 0.3);
         }
         
         .pixel-corner::before {
@@ -624,6 +614,36 @@
         .pixel-corner::after {
             bottom: -2px;
             right: -2px;
+        }
+        
+        /* Tailwind 배경색 가시성 향상 */
+        .bg-slate-800,
+        .bg-slate-800\/60 {
+            background-color: rgba(40, 40, 40, 0.95) !important;
+        }
+        
+        .bg-slate-900,
+        .bg-slate-900\/80 {
+            background-color: rgba(35, 35, 35, 0.95) !important;
+        }
+        
+        /* 테두리 가시성 향상 */
+        .border-yellow-500\/30,
+        .border-blue-500\/50,
+        .border-purple-500\/50,
+        .border-green-500\/40,
+        .border-green-500\/50 {
+            border-color: rgba(255, 255, 255, 0.4) !important;
+        }
+        
+        /* 텍스트 색상 가시성 향상 */
+        .text-gray-300,
+        .text-gray-400 {
+            color: #e5e7eb !important;
+        }
+        
+        .text-gray-500 {
+            color: #d1d5db !important;
         }
     </style>
 </head>
@@ -663,9 +683,9 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 mb-12">
                 <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="count-number" id="count-multiplier">0배</div>
-                    <p class="text-xl text-gray-400 mt-2">최고 성과 배율</p>
-                    <p class="text-sm text-gray-500 mt-1">최고 vs 최저 성과자</p>
+                    <div class="count-number" id="count-multiplier">0%</div>
+                    <p class="text-xl text-gray-400 mt-2">영업이익 공유 비율</p>
+                    <p class="text-sm text-gray-500 mt-1">최대 15%까지 공유</p>
                 </div>
                 <div class="animate-fade-in-up" style="animation-delay: 0.4s;">
                     <div class="count-number" id="count-periods">0</div>
@@ -803,9 +823,6 @@
                         <div class="text-xs text-green-400 mt-1 font-bold" id="diagram-pool">최대 40억</div>
                     </div>
                 </div>
-                <div class="mt-4 text-center text-sm text-gray-400">
-                    각 단계마다 <span class="text-yellow-400 font-bold">투명하게 공개</span>되어 누구나 확인할 수 있습니다
-                </div>
             </div>
             
             <!-- 스토리 플로우 -->
@@ -919,18 +936,18 @@
                             영업이익 중 일부를 인센티브로 배분합니다<br>
                             <span class="text-yellow-400 font-bold">성과가 좋을수록 비율이 증가!</span>
                         </p>
-                        <div class="mt-4 p-5 bg-gradient-to-br from-green-500/20 via-lime-500/20 to-green-500/20 rounded border-2 border-green-400/60">
+                        <div class="mt-4 p-5 bg-gradient-to-br from-green-500/20 via-lime-500/20 to-green-500/20 rounded border-2 border-white/50" style="background: rgba(40, 40, 40, 0.95) !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
                             <div class="text-center">
-                                <div class="text-sm text-gray-300 mb-3">최종 인센티브 풀</div>
+                                <div class="text-sm text-gray-200 mb-3" style="color: #e5e7eb !important;">최종 인센티브 풀</div>
                                 <div class="text-5xl font-black mb-3">
-                                    <span class="bg-gradient-to-r from-yellow-400 to-green-400 bg-clip-text text-transparent">
+                                    <span class="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent" style="color: #fbbf24 !important; -webkit-text-fill-color: #fbbf24;">
                                         영업이익의<br>최대 15%
                                     </span>
                                 </div>
-                                <div class="text-lg text-gray-300 mb-2">= 이 돈을 모두가 나눠 갖습니다</div>
-                                <div class="mt-4 p-3 bg-slate-800/60 rounded-lg">
-                                    <div class="text-sm text-gray-400">예시 계산</div>
-                                    <div class="text-xl font-bold text-yellow-400"><span id="profit-for-incentive">269</span>억 × 15% = <span class="text-green-400" id="incentive-pool">약 40억원</span></div>
+                                <div class="text-lg text-gray-200 mb-2" style="color: #e5e7eb !important;">= 이 돈을 모두가 나눠 갖습니다</div>
+                                <div class="mt-4 p-3 bg-slate-800/60 rounded-lg" style="background: rgba(30, 30, 30, 0.9) !important; border: 1px solid rgba(255, 255, 255, 0.2);">
+                                    <div class="text-sm text-gray-300" style="color: #d1d5db !important;">예시 계산</div>
+                                    <div class="text-xl font-bold text-yellow-400"><span id="profit-for-incentive">269</span>억 × 15% = <span class="text-yellow-300" id="incentive-pool" style="color: #fbbf24 !important;">약 40억원</span></div>
                                 </div>
                             </div>
                         </div>
@@ -1070,7 +1087,7 @@
                         <div class="font-bold mb-2 text-green-400">✅ 성과가 높을수록</div>
                         <p class="text-sm">더 높은 배율이 적용되어 보상 격차가 명확해집니다</p>
                         <div class="mt-3 text-xs text-yellow-400">
-                            최상위 성과자는 하위 성과자 대비 최대 수배 ~ 수십배까지 차등
+                            성과 수준에 따라 보상 차이가 명확하게 반영됩니다
                         </div>
                     </div>
                     <div class="bg-slate-800 p-4 rounded-lg">
@@ -1085,20 +1102,6 @@
                     <div class="text-center">
                         <strong class="text-xl">핵심:</strong> 
                         <span class="text-lg ml-2">성과가 뛰어날수록, 오래 기여할수록 보상이 커집니다</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-8">
-                <button class="explore-btn" onclick="showPerformanceDistribution()">
-                    📊 성과별 분포 예시 보기
-                </button>
-            </div>
-            
-            <div id="performance-distribution" class="detail-panel mt-6">
-                <div class="chart-container" style="max-height: 450px;">
-                    <div style="height: 350px;">
-                        <canvas id="performanceDistributionChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -1174,7 +1177,7 @@
                                 <span class="text-yellow-400 font-bold text-2xl ml-2">1억원+</span>
                             </div>
                             <div class="text-xs text-gray-400 mt-3">
-                                * 성과 계수는 개인별 평가 결과에 따라 결정되며, 최대 수십배까지 차등 적용됩니다
+                                * 성과 계수는 개인별 평가 결과에 따라 차등 적용됩니다
                             </div>
                         </div>
                     </div>
@@ -1197,20 +1200,6 @@
                         <span><strong>역전 방지:</strong> 성과가 낮은 사람이 높은 사람보다 많이 받는 일이 없도록 자동 보정</span>
                     </li>
                 </ul>
-            </div>
-            
-            <div class="text-center mt-8">
-                <button class="explore-btn" onclick="showPersonalExample()">
-                    👤 지급 예시 보기
-                </button>
-            </div>
-            
-            <div id="personal-example" class="detail-panel mt-6">
-                <div class="chart-container" style="max-height: 450px;">
-                    <div style="height: 350px;">
-                        <canvas id="personalExampleChart"></canvas>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1430,10 +1419,8 @@
     <section class="section" id="section-7">
         <div class="text-center max-w-5xl">
             <div class="mb-12">
-                <h2 class="text-6xl font-black mb-6">
-                    <span class="bg-gradient-to-r from-green-400 via-lime-500 to-green-400 bg-clip-text text-transparent">
-                        함께 성장하는<br>공정한 보상 시스템
-                    </span>
+                <h2 class="text-6xl font-black mb-6 text-white">
+                    함께 성장하는<br>공정한 보상 시스템
                 </h2>
                 <p class="text-2xl text-gray-300 font-light">
                     당신의 성과가 곧 당신의 보상입니다
@@ -1441,37 +1428,37 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
-                <div class="bg-slate-900/80 p-8 rounded border-2 border-green-500/40">
-                    <div style="color: #98FF98; text-shadow: 0 0 15px rgba(152, 255, 152, 0.8);" class="text-5xl mb-4">🎯</div>
+                <div class="bg-slate-900/80 p-8 rounded border-2 border-white/40" style="background: rgba(35, 35, 35, 0.95) !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
+                    <div style="color: #98FF98;" class="text-5xl mb-4">🎯</div>
                     <h3 class="text-2xl font-bold mb-3" style="color: #98FF98;">투명성</h3>
-                    <p class="text-gray-400">
+                    <p class="text-gray-300" style="color: #e5e7eb !important;">
                         모든 계산 과정이<br>
                         명확하게 운영됩니다
                     </p>
                 </div>
                 
-                <div class="bg-slate-900/80 p-8 rounded border-2 border-green-500/40">
-                    <div style="color: #98FF98; text-shadow: 0 0 15px rgba(152, 255, 152, 0.8);" class="text-5xl mb-4">💪</div>
+                <div class="bg-slate-900/80 p-8 rounded border-2 border-white/40" style="background: rgba(35, 35, 35, 0.95) !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
+                    <div style="color: #98FF98;" class="text-5xl mb-4">💪</div>
                     <h3 class="text-2xl font-bold mb-3" style="color: #98FF98;">공정성</h3>
-                    <p class="text-gray-400">
+                    <p class="text-gray-300" style="color: #e5e7eb !important;">
                         동일한 기준으로<br>
                         모두를 평가합니다
                     </p>
                 </div>
                 
-                <div class="bg-slate-900/80 p-8 rounded border-2 border-green-500/40">
-                    <div style="color: #98FF98; text-shadow: 0 0 15px rgba(152, 255, 152, 0.8);" class="text-5xl mb-4">🔥</div>
+                <div class="bg-slate-900/80 p-8 rounded border-2 border-white/40" style="background: rgba(35, 35, 35, 0.95) !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
+                    <div style="color: #98FF98;" class="text-5xl mb-4">🔥</div>
                     <h3 class="text-2xl font-bold mb-3" style="color: #98FF98;">동기부여</h3>
-                    <p class="text-gray-400">
+                    <p class="text-gray-300" style="color: #e5e7eb !important;">
                         성과를 내면<br>
                         즉시 보상으로 연결
                     </p>
                 </div>
                 
-                <div class="bg-slate-900/80 p-8 rounded border-2 border-green-500/40">
-                    <div style="color: #98FF98; text-shadow: 0 0 15px rgba(152, 255, 152, 0.8);" class="text-5xl mb-4">📈</div>
+                <div class="bg-slate-900/80 p-8 rounded border-2 border-white/40" style="background: rgba(35, 35, 35, 0.95) !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
+                    <div style="color: #98FF98;" class="text-5xl mb-4">📈</div>
                     <h3 class="text-2xl font-bold mb-3" style="color: #98FF98;">성장성</h3>
-                    <p class="text-gray-400">
+                    <p class="text-gray-300" style="color: #e5e7eb !important;">
                         회사의 성공이<br>
                         개인의 부로 직결
                     </p>
@@ -1504,11 +1491,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="mt-8 text-gray-500 text-sm">
-                <p style="color: #98FF98; opacity: 0.6;">슈퍼캣 인센티브 시스템 v9.0</p>
-                <p class="mt-1">문의: HR팀</p>
             </div>
         </div>
     </section>
@@ -1639,7 +1621,7 @@
         const introObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCount('count-multiplier', 60, '배', 2000);
+                    animateCount('count-multiplier', 15, '%', 2000);
                     setTimeout(() => animateCount('count-periods', 2, '', 1500), 300);
                     setTimeout(() => animateCount('count-metrics', 10, '+', 1500), 600);
                 }
@@ -1656,161 +1638,6 @@
             const panel = document.getElementById(detailId);
             if (panel) {
                 panel.classList.toggle('open');
-            }
-        }
-        
-        // 성과 분포 차트 표시
-        function showPerformanceDistribution() {
-            toggleDetail('performance-distribution');
-            
-            // 차트가 없으면 생성
-            if (!window.performanceChart) {
-                setTimeout(() => {
-                    const ctx = document.getElementById('performanceDistributionChart');
-                    if (ctx) {
-                        window.performanceChart = new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: ['최상위\n성과자', '상위\n성과자', '중상위\n성과자', '중위\n성과자', '중하위\n성과자', '하위\n성과자'],
-                                datasets: [{
-                                    label: '상대 보상 배율 (하위 성과자 = 1.0 기준)',
-                                    data: [56.2, 18.7, 9.4, 7.2, 6.0, 1.0],
-                                    backgroundColor: [
-                                        'rgba(168, 85, 247, 0.7)',  // 보라
-                                        'rgba(239, 68, 68, 0.7)',   // 빨강
-                                        'rgba(249, 115, 22, 0.7)',  // 주황
-                                        'rgba(251, 191, 36, 0.7)',  // 노랑
-                                        'rgba(34, 197, 94, 0.7)',   // 초록
-                                        'rgba(59, 130, 246, 0.7)'   // 파랑
-                                    ],
-                                    borderColor: [
-                                        'rgb(168, 85, 247)',
-                                        'rgb(239, 68, 68)',
-                                        'rgb(249, 115, 22)',
-                                        'rgb(251, 191, 36)',
-                                        'rgb(34, 197, 94)',
-                                        'rgb(59, 130, 246)'
-                                    ],
-                                    borderWidth: 2
-                                }]
-                            },
-                            options: {
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                plugins: {
-                                    legend: {
-                                        labels: { color: '#cbd5e1', font: { size: 14 } }
-                                    },
-                                    title: {
-                                        display: true,
-                                        text: '성과 수준별 상대 배율 (1년 이상 근속 기준)',
-                                        color: '#fbbf24',
-                                        font: { size: 18, weight: 'bold' }
-                                    },
-                                    tooltip: {
-                                        callbacks: {
-                                            label: function(context) {
-                                                return context.parsed.y.toFixed(1) + '배';
-                                            }
-                                        }
-                                    }
-                                },
-                                scales: {
-                                    y: {
-                                        beginAtZero: true,
-                                        ticks: { 
-                                            color: '#94a3b8',
-                                            callback: function(value) {
-                                                return value + '배';
-                                            }
-                                        },
-                                        grid: { color: 'rgba(148, 163, 184, 0.1)' },
-                                        title: {
-                                            display: true,
-                                            text: '상대 배율',
-                                            color: '#94a3b8'
-                                        }
-                                    },
-                                    x: {
-                                        ticks: { color: '#94a3b8', font: { size: 11 } },
-                                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                                    }
-                                }
-                            }
-                        });
-                    }
-                }, 300);
-            }
-        }
-        
-        // 개인 시뮬레이션 차트
-        function showPersonalExample() {
-            toggleDetail('personal-example');
-            
-            if (!window.personalChart) {
-                setTimeout(() => {
-                    const ctx = document.getElementById('personalExampleChart');
-                    if (ctx) {
-                        window.personalChart = new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: [
-                                    '최상위\n성과자\n(1년 이상)',
-                                    '최상위\n성과자\n(6-12개월)',
-                                    '상위\n성과자\n(1년 이상)',
-                                    '중상위\n성과자\n(1년 이상)',
-                                    '중위\n성과자\n(1년 이상)',
-                                    '중하위\n성과자\n(1년 이상)'
-                                ],
-                                datasets: [{
-                                    label: '예상 인센티브 금액 (만원)',
-                                    data: [28080, 16848, 9360, 4680, 3600, 3000],
-                                    backgroundColor: 'rgba(251, 191, 36, 0.7)',
-                                    borderColor: 'rgb(251, 191, 36)',
-                                    borderWidth: 2
-                                }]
-                            },
-                            options: {
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                plugins: {
-                                    legend: {
-                                        labels: { color: '#cbd5e1', font: { size: 14 } }
-                                    },
-                                    title: {
-                                        display: true,
-                                        text: '성과/근속별 개인 인센티브 예시 (10억 풀 기준)',
-                                        color: '#fbbf24',
-                                        font: { size: 16, weight: 'bold' }
-                                    },
-                                    tooltip: {
-                                        callbacks: {
-                                            label: function(context) {
-                                                return context.parsed.y.toLocaleString() + '만원';
-                                            }
-                                        }
-                                    }
-                                },
-                                scales: {
-                                    y: {
-                                        beginAtZero: true,
-                                        ticks: { 
-                                            color: '#94a3b8',
-                                            callback: function(value) {
-                                                return value.toLocaleString() + '만원';
-                                            }
-                                        },
-                                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                                    },
-                                    x: {
-                                        ticks: { color: '#94a3b8', font: { size: 10 } },
-                                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                                    }
-                                }
-                            }
-                        });
-                    }
-                }, 300);
             }
         }
         
@@ -2139,8 +1966,6 @@
         
         // 전역 함수로 등록
         window.toggleDetail = toggleDetail;
-        window.showPerformanceDistribution = showPerformanceDistribution;
-        window.showPersonalExample = showPersonalExample;
         window.updateCalculations = updateCalculations;
         window.updateAllCalculations = updateAllCalculations;
     </script>
