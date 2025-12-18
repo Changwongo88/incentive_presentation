@@ -685,7 +685,7 @@
                 <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
                     <div class="count-number" id="count-multiplier">0%</div>
                     <p class="text-xl text-gray-400 mt-2">영업이익 공유 비율</p>
-                    <p class="text-sm text-gray-500 mt-1">최대 20%까지 공유</p>
+                    <p class="text-sm text-gray-500 mt-1">영업이익 배분율</p>
                 </div>
                 <div class="animate-fade-in-up" style="animation-delay: 0.4s;">
                     <div class="count-number" id="count-periods">0</div>
@@ -844,10 +844,10 @@
                                     <span class="text-gray-300 font-semibold">게임 매출 (억원)</span>
                                     <span class="slider-value" id="revenue-display">1,000억원</span>
                                 </div>
-                                <input type="range" min="500" max="10000" value="1000" step="50" class="slider" id="revenue-slider">
+                                <input type="range" min="500" max="3000" value="1000" step="50" class="slider" id="revenue-slider">
                                 <div class="slider-range">
                                     <span>500억</span>
-                                    <span>10,000억(1조)</span>
+                                    <span>3,000억</span>
                                 </div>
                             </div>
                             <div class="text-xs text-gray-500 text-center mt-3">
@@ -907,10 +907,10 @@
                                     <span class="text-gray-300 font-semibold">비용 (억원)</span>
                                     <span class="slider-value text-red-400" id="cost-display">200억원</span>
                                 </div>
-                                <input type="range" min="100" max="10000" value="200" step="50" class="slider" id="cost-slider">
+                                <input type="range" min="100" max="1000" value="200" step="50" class="slider" id="cost-slider">
                                 <div class="slider-range">
                                     <span>100억</span>
-                                    <span>10,000억(1조)</span>
+                                    <span>1,000억</span>
                                 </div>
                             </div>
                         </div>
@@ -945,15 +945,29 @@
                         <div class="mt-4 p-5 bg-gradient-to-br from-green-500/20 via-lime-500/20 to-green-500/20 rounded border-2 border-white/50" style="background: rgba(40, 40, 40, 0.95) !important; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
                             <div class="text-center">
                                 <div class="text-sm text-gray-200 mb-3" style="color: #e5e7eb !important;">최종 인센티브 풀</div>
-                                <div class="text-5xl font-black mb-3">
-                                    <span class="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent" style="color: #fbbf24 !important; -webkit-text-fill-color: #fbbf24;">
-                                        영업이익의<br>최대 20%
-                                    </span>
+                                <div class="text-3xl font-black mb-4 text-gray-200" style="color: #e5e7eb !important;">
+                                    영업이익의
                                 </div>
-                                <div class="text-lg text-gray-200 mb-2" style="color: #e5e7eb !important;">= 이 돈을 모두가 나눠 갖습니다</div>
+                                
+                                <!-- 배분율 슬라이더 -->
+                                <div class="max-w-md mx-auto mb-4">
+                                    <div class="slider-container">
+                                        <div class="slider-label">
+                                            <span class="text-gray-300 font-semibold">배분율 조절</span>
+                                            <span class="slider-value text-4xl" id="incentive-rate-display" style="color: #fbbf24;">15%</span>
+                                        </div>
+                                        <input type="range" min="5" max="20" value="15" step="1" class="slider" id="incentive-rate-slider">
+                                        <div class="slider-range">
+                                            <span>5%</span>
+                                            <span>20%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-lg text-gray-200 mb-3" style="color: #e5e7eb !important;">= 이 돈을 모두가 나눠 갖습니다</div>
                                 <div class="mt-4 p-3 bg-slate-800/60 rounded-lg" style="background: rgba(30, 30, 30, 0.9) !important; border: 1px solid rgba(255, 255, 255, 0.2);">
                                     <div class="text-sm text-gray-300" style="color: #d1d5db !important;">예시 계산</div>
-                                    <div class="text-xl font-bold text-yellow-400"><span id="profit-for-incentive">269</span>억 × 20% = <span class="text-yellow-300" id="incentive-pool" style="color: #fbbf24 !important;">약 54억원</span></div>
+                                    <div class="text-xl font-bold text-yellow-400"><span id="profit-for-incentive">350</span>억 × <span id="incentive-rate-percent">15</span>% = <span class="text-yellow-300" id="incentive-pool" style="color: #fbbf24 !important;">약 53억원</span></div>
                                 </div>
                             </div>
                         </div>
@@ -1133,7 +1147,7 @@
                         <div class="text-center">
                             <div class="text-sm text-gray-400 mb-2">예시: 상위 성과자, 1년 이상 근속</div>
                             <div class="text-lg">
-                                5,000만원 × <span class="text-blue-400">고성과 계수</span> × <span class="text-green-400">1.0</span> = 
+                                1,000만원 × <span class="text-blue-400">고성과 계수</span> × <span class="text-green-400">1.0</span> = 
                                 <span class="text-yellow-400 font-bold text-2xl ml-2">1억원+</span>
                             </div>
                             <div class="text-xs text-gray-400 mt-3">
@@ -1396,8 +1410,8 @@
                     
                     <div class="p-8 bg-slate-800/80 rounded-lg border-2 border-white/50" style="background: rgba(40, 40, 40, 0.95) !important; box-shadow: 0 0 30px rgba(152, 255, 152, 0.3);">
                         <div class="text-center">
-                            <div class="text-sm text-gray-400 mb-2">인센티브 풀 (최대 20%)</div>
-                            <div class="text-5xl font-black mb-2" style="color: #98FF98;" id="current-incentive-pool">100</div>
+                            <div class="text-sm text-gray-400 mb-2">인센티브 풀 (<span id="simulator-rate-label">15</span>%)</div>
+                            <div class="text-5xl font-black mb-2" style="color: #98FF98;" id="current-incentive-pool">75</div>
                             <div class="text-xl text-gray-300">억원</div>
                         </div>
                     </div>
@@ -1408,9 +1422,9 @@
                     <div class="text-2xl text-gray-300">
                         <span class="text-purple-400 font-bold" id="formula-profit">500</span>억원 
                         <span class="text-gray-500">×</span> 
-                        <span class="text-yellow-400 font-bold">20%</span> 
+                        <span class="text-yellow-400 font-bold" id="formula-rate">15</span>% 
                         <span class="text-gray-500">=</span> 
-                        <span style="color: #98FF98;" class="font-bold" id="formula-pool">100</span>억원
+                        <span style="color: #98FF98;" class="font-bold" id="formula-pool">75</span>억원
                     </div>
                     <div class="text-sm text-gray-500 mt-3">
                         💡 슬라이더를 움직여 영업이익에 따른 인센티브 풀 변화를 확인하세요
@@ -1626,7 +1640,7 @@
         const introObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCount('count-multiplier', 20, '%', 2000);
+                    animateCount('count-multiplier', 15, '%', 2000);
                     setTimeout(() => animateCount('count-periods', 2, '', 1500), 300);
                     setTimeout(() => animateCount('count-metrics', 10, '+', 1500), 600);
                 }
@@ -1648,7 +1662,10 @@
         
         // 영업이익에 따른 인센티브 풀 계산 및 업데이트
         function updateProfitSimulation(profit) {
-            const incentivePool = Math.round(profit * 0.20 * 10) / 10;
+            const incentiveRateSlider = document.getElementById('incentive-rate-slider');
+            const ratePercent = incentiveRateSlider ? parseInt(incentiveRateSlider.value) : 15;
+            const rate = ratePercent / 100;
+            const incentivePool = Math.round(profit * rate * 10) / 10;
             
             // 표시 업데이트
             if (document.getElementById('current-profit')) {
@@ -1660,8 +1677,14 @@
             if (document.getElementById('formula-profit')) {
                 document.getElementById('formula-profit').textContent = profit;
             }
+            if (document.getElementById('formula-rate')) {
+                document.getElementById('formula-rate').textContent = ratePercent;
+            }
             if (document.getElementById('formula-pool')) {
                 document.getElementById('formula-pool').textContent = Math.round(incentivePool);
+            }
+            if (document.getElementById('simulator-rate-label')) {
+                document.getElementById('simulator-rate-label').textContent = ratePercent;
             }
         }
         
@@ -1719,9 +1742,41 @@
             }
         });
         
+        // 인센티브 배분율 슬라이더 업데이트 함수
+        function updateIncentiveRateDisplay() {
+            const incentiveRateSlider = document.getElementById('incentive-rate-slider');
+            const incentiveRateDisplay = document.getElementById('incentive-rate-display');
+            const incentiveRatePercent = document.getElementById('incentive-rate-percent');
+            const profitForIncentive = document.getElementById('profit-for-incentive');
+            const incentivePoolElement = document.getElementById('incentive-pool');
+            
+            if (incentiveRateSlider && incentiveRateDisplay) {
+                const rate = parseInt(incentiveRateSlider.value);
+                incentiveRateDisplay.textContent = rate + '%';
+                
+                if (incentiveRatePercent) {
+                    incentiveRatePercent.textContent = rate;
+                }
+                
+                // 영업이익 계산 (현재 슬라이더 값 기준)
+                const { revenue, ratio, cost } = getSliderValues();
+                const netSales = revenue * 0.7 * (ratio / 100);
+                const operatingProfit = Math.max(0, netSales - cost);
+                const incentivePool = Math.round(operatingProfit * (rate / 100));
+                
+                if (profitForIncentive) {
+                    profitForIncentive.textContent = Math.round(operatingProfit);
+                }
+                if (incentivePoolElement) {
+                    incentivePoolElement.textContent = '약 ' + incentivePool + '억원';
+                }
+            }
+        }
+        
         // 전체 계산 업데이트 함수 (게임 매출, 배분율, 비용 모두 처리)
         function updateCalculations(revenue, ratio, cost) {
-            const incentiveRate = 0.20; // 20%
+            const incentiveRateSlider = document.getElementById('incentive-rate-slider');
+            const incentiveRate = incentiveRateSlider ? parseInt(incentiveRateSlider.value) / 100 : 0.15; // 슬라이더 값 또는 기본 15%
             
             // 계산
             const netSales = revenue * 0.7 * (ratio / 100); // 순매출
@@ -1857,16 +1912,38 @@
             // 게임 매출 슬라이더 이벤트
             revenueSlider.addEventListener('input', () => {
                 updateAllCalculations();
+                updateIncentiveRateDisplay();
             });
             
             // 배분율 슬라이더 이벤트
             ratioSlider.addEventListener('input', () => {
                 updateAllCalculations();
+                updateIncentiveRateDisplay();
             });
             
             // 비용 슬라이더 이벤트
             costSlider.addEventListener('input', () => {
                 updateAllCalculations();
+                updateIncentiveRateDisplay();
+            });
+        }
+        
+        // 인센티브 배분율 슬라이더 이벤트
+        const incentiveRateSlider = document.getElementById('incentive-rate-slider');
+        if (incentiveRateSlider) {
+            // 초기값 설정
+            updateIncentiveRateDisplay();
+            
+            incentiveRateSlider.addEventListener('input', () => {
+                updateIncentiveRateDisplay();
+                updateAllCalculations(); // 다른 계산도 업데이트
+                
+                // 영업이익 시뮬레이터도 업데이트
+                const profitSlider = document.getElementById('profit-slider');
+                if (profitSlider) {
+                    const profit = parseInt(profitSlider.value);
+                    updateProfitSimulation(profit);
+                }
             });
         }
         
