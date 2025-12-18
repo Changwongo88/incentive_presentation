@@ -685,7 +685,7 @@
                 <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
                     <div class="count-number" id="count-multiplier">0%</div>
                     <p class="text-xl text-gray-400 mt-2">영업이익 공유 비율</p>
-                    <p class="text-sm text-gray-500 mt-1">최대 15%까지 공유</p>
+                    <p class="text-sm text-gray-500 mt-1">최대 20%까지 공유</p>
                 </div>
                 <div class="animate-fade-in-up" style="animation-delay: 0.4s;">
                     <div class="count-number" id="count-periods">0</div>
@@ -947,13 +947,13 @@
                                 <div class="text-sm text-gray-200 mb-3" style="color: #e5e7eb !important;">최종 인센티브 풀</div>
                                 <div class="text-5xl font-black mb-3">
                                     <span class="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent" style="color: #fbbf24 !important; -webkit-text-fill-color: #fbbf24;">
-                                        영업이익의<br>최대 15%
+                                        영업이익의<br>최대 20%
                                     </span>
                                 </div>
                                 <div class="text-lg text-gray-200 mb-2" style="color: #e5e7eb !important;">= 이 돈을 모두가 나눠 갖습니다</div>
                                 <div class="mt-4 p-3 bg-slate-800/60 rounded-lg" style="background: rgba(30, 30, 30, 0.9) !important; border: 1px solid rgba(255, 255, 255, 0.2);">
                                     <div class="text-sm text-gray-300" style="color: #d1d5db !important;">예시 계산</div>
-                                    <div class="text-xl font-bold text-yellow-400"><span id="profit-for-incentive">269</span>억 × 15% = <span class="text-yellow-300" id="incentive-pool" style="color: #fbbf24 !important;">약 40억원</span></div>
+                                    <div class="text-xl font-bold text-yellow-400"><span id="profit-for-incentive">269</span>억 × 20% = <span class="text-yellow-300" id="incentive-pool" style="color: #fbbf24 !important;">약 54억원</span></div>
                                 </div>
                             </div>
                         </div>
@@ -1396,8 +1396,8 @@
                     
                     <div class="p-8 bg-slate-800/80 rounded-lg border-2 border-white/50" style="background: rgba(40, 40, 40, 0.95) !important; box-shadow: 0 0 30px rgba(152, 255, 152, 0.3);">
                         <div class="text-center">
-                            <div class="text-sm text-gray-400 mb-2">인센티브 풀 (최대 15%)</div>
-                            <div class="text-5xl font-black mb-2" style="color: #98FF98;" id="current-incentive-pool">75</div>
+                            <div class="text-sm text-gray-400 mb-2">인센티브 풀 (최대 20%)</div>
+                            <div class="text-5xl font-black mb-2" style="color: #98FF98;" id="current-incentive-pool">100</div>
                             <div class="text-xl text-gray-300">억원</div>
                         </div>
                     </div>
@@ -1408,9 +1408,9 @@
                     <div class="text-2xl text-gray-300">
                         <span class="text-purple-400 font-bold" id="formula-profit">500</span>억원 
                         <span class="text-gray-500">×</span> 
-                        <span class="text-yellow-400 font-bold">15%</span> 
+                        <span class="text-yellow-400 font-bold">20%</span> 
                         <span class="text-gray-500">=</span> 
-                        <span style="color: #98FF98;" class="font-bold" id="formula-pool">75</span>억원
+                        <span style="color: #98FF98;" class="font-bold" id="formula-pool">100</span>억원
                     </div>
                     <div class="text-sm text-gray-500 mt-3">
                         💡 슬라이더를 움직여 영업이익에 따른 인센티브 풀 변화를 확인하세요
@@ -1626,7 +1626,7 @@
         const introObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCount('count-multiplier', 15, '%', 2000);
+                    animateCount('count-multiplier', 20, '%', 2000);
                     setTimeout(() => animateCount('count-periods', 2, '', 1500), 300);
                     setTimeout(() => animateCount('count-metrics', 10, '+', 1500), 600);
                 }
@@ -1648,7 +1648,7 @@
         
         // 영업이익에 따른 인센티브 풀 계산 및 업데이트
         function updateProfitSimulation(profit) {
-            const incentivePool = Math.round(profit * 0.15 * 10) / 10;
+            const incentivePool = Math.round(profit * 0.20 * 10) / 10;
             
             // 표시 업데이트
             if (document.getElementById('current-profit')) {
@@ -1721,7 +1721,7 @@
         
         // 전체 계산 업데이트 함수 (게임 매출, 배분율, 비용 모두 처리)
         function updateCalculations(revenue, ratio, cost) {
-            const incentiveRate = 0.15; // 15%
+            const incentiveRate = 0.20; // 20%
             
             // 계산
             const netSales = revenue * 0.7 * (ratio / 100); // 순매출
